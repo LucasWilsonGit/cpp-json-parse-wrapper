@@ -665,6 +665,7 @@ public:
 			json_array_element_s* current = x->start;
 			for (auto& entry : out) {
 				get(entry, current);
+				current = current->next;
 			}
 		}
 		return *this;
