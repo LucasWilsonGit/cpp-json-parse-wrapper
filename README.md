@@ -7,7 +7,10 @@ int item;
 std::string optional;
 std::vector<std::vector<int>> nDimensional;
 
-json_parser("{\"item\": 51, \"optional\": \"Hello, world\", \"nDimensional\": [[2506, 3321, 5], [1,1], [-1, -15, -20, 256]]}").get(item).get_named_optional(optional, "optional").get(nDimensional);
+
+std::string json_input = "{\"item\": 51, \"optional\": \"Hello, world\", \"nDimensional\": [[2506, 3321, 5], [1,1], [-1, -15, -20, 256]]}";
+
+json_parser(json_input).get(item).get_named_optional(optional, "optional").get(nDimensional);
 
 std::cout << item << "\n" << optional << "\n";
 
